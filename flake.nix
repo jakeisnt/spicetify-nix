@@ -13,9 +13,18 @@
       system = "x86_64-linux";
       config.allowUnfree = true;
     };
-  in {
+  in rec {
     make-spicetify = pkgs.callPackage ./package.nix {
       inherit spicetify-themes;
+    };
+    packages.x86_64-linux = {
+      dribblish = make-spicetify {
+        theme = "Dribbblish";
+        colorScheme = "horizon";
+      };
+      solarized = make-spicetify {
+        theme = "SolarizedDark";
+      };
     };
   };
 }
