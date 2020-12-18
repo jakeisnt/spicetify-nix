@@ -1,0 +1,41 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1607522989,
+        "narHash": "sha256-o/jWhOSAlaK7y2M57OIriRt6whuVVocS/T0mG7fd1TI=",
+        "path": "/nix/store/cig3zz9li4b3cv2pvh7f32glb2h7l4c2-source",
+        "rev": "e9158eca70ae59e73fae23be5d13d3fa0cfc78b4",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "spicetify-themes": "spicetify-themes"
+      }
+    },
+    "spicetify-themes": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1608133170,
+        "narHash": "sha256-wyMamTMKwHheoSoobGblc1Np7a9OMi6nBnRfjGS4XrE=",
+        "owner": "morpheusthewhite",
+        "repo": "spicetify-themes",
+        "rev": "7ffb7c8288c94eae12937094e6a292756f871a09",
+        "type": "github"
+      },
+      "original": {
+        "owner": "morpheusthewhite",
+        "repo": "spicetify-themes",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

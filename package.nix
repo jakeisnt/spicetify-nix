@@ -1,5 +1,5 @@
+{ lib, spotify, callPackage, spicetify-themes }:
 { 
-  pkgs ? import <nixpkgs> {},
   theme ? "SpicetifyDefault",
   colorScheme ? "",
   thirdParyThemes ? {},
@@ -27,8 +27,8 @@
 }:
 
 let
-  inherit (pkgs.lib.lists) foldr;
-  inherit (pkgs.lib.attrsets) mapAttrsToList;
+  inherit (lib.lists) foldr;
+  inherit (lib.attrsets) mapAttrsToList;
 
   # Helper functions
   pipeConcat = foldr (a: b: a + "|" + b) "";
@@ -37,10 +37,8 @@ let
   makeLnCommands = type: (mapAttrsToList (name: path: "ln -sf ${path} ./${type}/${name}"));
 
   # Setup spicetify
-  spicetifyPkg = pkgs.callPackage ./spicetify.nix {};
+  spicetifyPkg = callPackage ./spicetify.nix {};
   spicetify = "SPICETIFY_CONFIG=. ${spicetifyPkg}/spicetify";
-
-  themes = import ./themes-src.nix;
 
   # Dribblish is a theme which needs a couple extra settings
   isDribblish = theme == "Dribbblish";
@@ -59,14 +57,14 @@ let
   extensionString = pipeConcat ((if isDribblish then [ "dribbblish.js" ] else []) ++ enabledExtensions);
   customAppsString = pipeConcat enabledCustomApps;
 in
-pkgs.spotify.overrideAttrs (oldAttrs: rec {
+spotify.overrideAttrs (oldAttrs: rec {
   postInstall=''
     touch $out/prefs
     mkdir Themes
     mkdir Extensions
     mkdir CustomApps
 
-    find ${themes} -maxdepth 1 -type d -exec ln -s {} Themes \;
+    find ${spicetify-themes} -maxdepth 1 -type d -exec ln -s {} Themes \;
     ${extraCommands}
     
     ${spicetify} config \
