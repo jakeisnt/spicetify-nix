@@ -21,9 +21,15 @@
       dribblish = make-spicetify {
         theme = "Dribbblish";
         colorScheme = "horizon";
+        injectCss = true;
+        replaceColors = true;
+        overwriteAssets = true;
       };
       solarized = make-spicetify {
         theme = "SolarizedDark";
+        injectCss = true;
+        replaceColors = true;
+        overwriteAssets = true;
       };
     };
   };
