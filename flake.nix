@@ -14,22 +14,9 @@
       config.allowUnfree = true;
     };
   in rec {
-    make-spicetify = pkgs.callPackage ./package.nix {
-      inherit spicetify-themes;
-    };
     packages.x86_64-linux = {
-      dribblish = make-spicetify {
-        theme = "Dribbblish";
-        colorScheme = "horizon";
-        injectCss = true;
-        replaceColors = true;
-        overwriteAssets = true;
-      };
-      solarized = make-spicetify {
-        theme = "SolarizedDark";
-        injectCss = true;
-        replaceColors = true;
-        overwriteAssets = true;
+      solarizedDark = pkgs.callPackage ./spicetify.nix {
+        inherit spicetify-themes;
       };
     };
   };
