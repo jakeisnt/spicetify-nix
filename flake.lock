@@ -2,10 +2,10 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1607522989,
-        "narHash": "sha256-o/jWhOSAlaK7y2M57OIriRt6whuVVocS/T0mG7fd1TI=",
-        "path": "/nix/store/cig3zz9li4b3cv2pvh7f32glb2h7l4c2-source",
-        "rev": "e9158eca70ae59e73fae23be5d13d3fa0cfc78b4",
+        "lastModified": 1611219034,
+        "narHash": "sha256-bgp8G3LcpvKs22/z5Cj4XQkmZq05Aa0vaP1bKl7X0zM=",
+        "path": "/nix/store/pl5nzbz7s187b7x2scj27b4wpkm1g93h-source",
+        "rev": "f217c0ea7c148ddc0103347051555c7c252dcafb",
         "type": "path"
       },
       "original": {
@@ -22,11 +22,11 @@
     "spicetify-themes": {
       "flake": false,
       "locked": {
-        "lastModified": 1608133170,
-        "narHash": "sha256-wyMamTMKwHheoSoobGblc1Np7a9OMi6nBnRfjGS4XrE=",
+        "lastModified": 1610676077,
+        "narHash": "sha256-TmlI8LWMJwAVtuJUrxwxZPjF/w4+mkYm2BkiZ9K/9k0=",
         "owner": "morpheusthewhite",
         "repo": "spicetify-themes",
-        "rev": "7ffb7c8288c94eae12937094e6a292756f871a09",
+        "rev": "4cea2498cd00d07571e053afe96fe88f20e76a10",
         "type": "github"
       },
       "original": {
