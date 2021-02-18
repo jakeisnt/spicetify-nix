@@ -50,8 +50,8 @@ let
       echo '-------- 2'
       ls /tmp/spicetify-config/spicetify/Themes
       mkdir /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault
-      cp ${spicetify-themes}/SolarizedDark/color.ini /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/color.ini
-      cp ${spicetify-themes}/SolarizedDark/user.css /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/user.css
+      cp ${spicetify-themes}/Nord/color.ini /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/color.ini
+      cp ${spicetify-themes}/Nord/user.css /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/user.css
       echo '-------- 3'
       ${spicetify}/bin/spicetify-cli backup apply
       echo '-------- 4'
