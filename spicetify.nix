@@ -1,4 +1,4 @@
-{ pkgs, lib, buildGoModule, fetchFromGitHub, spotify-unwrapped, spicetify-themes }:
+{ pkgs, lib, buildGoModule, fetchFromGitHub, spotify-unwrapped, spicetify-themes, themeName }:
 
 let
   spicetify = buildGoModule rec {
@@ -50,8 +50,8 @@ let
       echo '-------- 2'
       ls /tmp/spicetify-config/spicetify/Themes
       mkdir /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault
-      cp ${spicetify-themes}/Nord/color.ini /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/color.ini
-      cp ${spicetify-themes}/Nord/user.css /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/user.css
+      cp ${spicetify-themes}/${themeName}/color.ini /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/color.ini
+      cp ${spicetify-themes}/${themeName}/user.css /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/user.css
       echo '-------- 3'
       ${spicetify}/bin/spicetify-cli backup apply
       echo '-------- 4'
