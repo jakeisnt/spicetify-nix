@@ -49,9 +49,15 @@ let
       cat $(${spicetify}/bin/spicetify-cli -c)
       echo '-------- 2'
       ls /tmp/spicetify-config/spicetify/Themes
+      mkdir /tmp/spicetify-config/spicetify/Extensions
       mkdir /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault
-      cp ${spicetify-themes}/Nord/color.ini /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/color.ini
-      cp ${spicetify-themes}/Nord/user.css /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/user.css
+      cp ${spicetify-themes}/Dribbblish/color.ini /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/color.ini
+      cp ${spicetify-themes}/Dribbblish/user.css /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/user.css
+      cp -r ${spicetify-themes}/Dribbblish/assets /tmp/spicetify-config/spicetify/THemes/SpicetifyDefault/assets
+      cp ${spicetify-themes}/Dribbblish/dribbblish.js /tmp/spicetify-config/spicetify/Extensions/dribbblish.js
+      ${spicetify}/bin/spicetify-cli config extensions dribbblish.js
+      ${spicetify}/bin/spicetify-cli config current_theme Dribbblish color_scheme nord-dark
+      ${spicetify}/bin/spicetify-cli config inject_css 1 replace_colors 1 overwrite_assets 1
       echo '-------- 3'
       ${spicetify}/bin/spicetify-cli backup apply
       echo '-------- 4'
