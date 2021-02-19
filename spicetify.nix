@@ -49,7 +49,7 @@ let
       cat $(${spicetify}/bin/spicetify-cli -c)
       echo '-------- 2'
       ls /tmp/spicetify-config/spicetify/Themes
-      mkdir /tmp/spicetify-config/spicetify/Extensions
+      ls /tmp/spicetify-config/spicetify/Extensions
       mkdir /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault
       cp ${spicetify-themes}/Dribbblish/color.ini /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/color.ini
       cp ${spicetify-themes}/Dribbblish/user.css /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/user.css
