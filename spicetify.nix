@@ -53,7 +53,7 @@ let
       mkdir /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault
       cp ${spicetify-themes}/Dribbblish/color.ini /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/color.ini
       cp ${spicetify-themes}/Dribbblish/user.css /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/user.css
-      cp -r ${spicetify-themes}/Dribbblish/assets /tmp/spicetify-config/spicetify/THemes/SpicetifyDefault/assets
+      cp -r ${spicetify-themes}/Dribbblish/assets /tmp/spicetify-config/spicetify/Themes/SpicetifyDefault/assets
       cp ${spicetify-themes}/Dribbblish/dribbblish.js /tmp/spicetify-config/spicetify/Extensions/dribbblish.js
       ${spicetify}/bin/spicetify-cli config extensions dribbblish.js
       ${spicetify}/bin/spicetify-cli config current_theme Dribbblish color_scheme nord-dark
